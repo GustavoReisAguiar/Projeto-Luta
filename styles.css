@@ -1,0 +1,31 @@
+body{
+    margin: 0;
+    background-color: #ccc;
+    align-items: center;
+    display: flex;
+    justify-content: center;   
+}
+
+.container{
+    position: absolute;
+    width: 250px;
+    height: 250px;
+    background-color: #ddd;
+    right: 0;
+    left: 0;
+    top: 0;
+    margin: auto;
+
+}
+
+h1{
+    background-color: aqua;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 34px;
+}
+input{
+    width: 95%;
+}
