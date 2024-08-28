@@ -86,7 +86,7 @@ class Stage{
 
     doAttack(attacking,attacked){
         if(attacked.life<= 0){
-            this.log.addMessage(`${attacking.name} já está morto`)
+            this.log.addMessage(`${attacked.name} já está morto`)
             return;
         }else if (attacking.life <= 0 && attacked.life > 0){
             attacking.attack = 0
@@ -103,8 +103,12 @@ class Stage{
         if(actualAttack > actualDefense){
             attacked.life -= actualAttack
             this.log.addMessage(`${attacking.name} causou ${actualAttack.toFixed(2)} em ${attacked.name}`) 
-        }else {
-            this.log.addMessage(`${attacked.name} Conseguiu defender`)
+        }
+        else if(attacking.life > 0) {
+            this.log.addMessage(`${attacked.name} Conseguiu defender`)}
+                else{
+             this.log.addMessage(`reinicie o jogo voce ja perdeu`)
+            
         }
 
         this.update()
